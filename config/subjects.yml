@@ -5,7 +5,7 @@ subjects:
 
   - id: ai_tools
     label: "AI Tools & Agents"
-    query: "AI agent frameworks, LLM releases, and developer tools this week"
+    query: "AI agent frameworks, LLM releases, and developer tools this week for Claude, Perplexity and Gemini"
 
   - id: uk_tech
     label: "UK Tech & Startups"
@@ -13,8 +13,8 @@ subjects:
 
   - id: home_automation
     label: "Home Automation"
-    query: "Home Assistant, smart home, and home automation news this week"
+    query: "Home Assistant, smart home, and home automation news this week with an emphasis on Home Assistant and ESP32 Home"
 
   - id: gaming
     label: "Gaming"
-    query: "PC and console gaming news, releases, and updates this week"
+    query: "PC and Playstation gaming news, releases, and updates this week"
