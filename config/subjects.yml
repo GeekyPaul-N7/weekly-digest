@@ -1,0 +1,20 @@
+subjects:
+  - id: salesforce
+    label: "Salesforce & CRM"
+    query: "Salesforce platform news, releases, and updates this week"
+
+  - id: ai_tools
+    label: "AI Tools & Agents"
+    query: "AI agent frameworks, LLM releases, and developer tools this week"
+
+  - id: uk_tech
+    label: "UK Tech & Startups"
+    query: "UK technology industry news and startup ecosystem this week"
+
+  - id: home_automation
+    label: "Home Automation"
+    query: "Home Assistant, smart home, and home automation news this week"
+
+  - id: gaming
+    label: "Gaming"
+    query: "PC and console gaming news, releases, and updates this week"
