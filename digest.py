@@ -49,6 +49,7 @@ def fetch_items(subject: dict, api_key: str) -> list[dict]:
     resp = requests.post(PERPLEXITY_URL, json=payload, headers=headers, timeout=30)
     resp.raise_for_status()
     raw = resp.json()["choices"][0]["message"]["content"]
+    log.info("Raw response for %s (first 500 chars): %s", subject["id"], raw[:500])
     raw = re.sub(r"^```[a-z]*\n?", "", raw.strip())
     raw = re.sub(r"\n?```$", "", raw)
     return json.loads(raw)
@@ -86,12 +87,12 @@ def main() -> None:
     sections = []
     for subj in subjects:
         try:
-            items = fetch_items(subj, api_key)
-            log.info("Fetched %d items for %s", len(items), subj["id"])
+            stories = fetch_items(subj, api_key)
+            log.info("Fetched %d stories for %s", len(stories), subj["id"])
         except Exception as exc:
             log.error("Failed to fetch %s: %s", subj["id"], exc)
-            items = []
-        sections.append({"id": subj["id"], "label": subj["label"], "items": items})
+            stories = []
+        sections.append({"id": subj["id"], "label": subj["label"], "stories": stories})
 
     html = render_html(sections, label, generated_at)
 
